@@ -4,7 +4,7 @@ def is_a_creator(n, a):
     print(f"To check if {a} is a creator of the group Z_{n} we will calculate the following:\n")
 
     print('=============================\n')
-    for i in range(0, n-1):
+    for i in range(1, n):
         res.append((res[-1] * a)%n)
         if res[-1] in res[:-1]:
             double.append(res[-1])
