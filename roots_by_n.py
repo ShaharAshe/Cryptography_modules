@@ -80,6 +80,8 @@ def roots_by_n(n, p, q, b):
             print("\n--------------------")
             if r%2 == 0:
                 i_1 *= -1
+            elif roots[1] == 0:
+                i_1 *= -1
             i_2 *= -1
             print(f"({(roots[0]*i_1)%p}, {(roots[1]*i_2)%q}) ->")
             c = (M_1*(roots[0]*i_1) + M_2*(roots[1]*i_2)) % n
@@ -93,8 +95,8 @@ if __name__ == "__main__":
     q = 151
     
     # b=4524
-    # b=7776
-    b=4757
+    b=7776
+    # b=4757
 
     roots_by_n(n, p, q, b)
 
