@@ -33,8 +33,9 @@ def is_a_creator(n:int, a:int) -> bool:
     print(f"if they are all not equal to 1 then {a} is a creator of the group Z_{n}")
     print("--------------------", end="\n\n")
     for f in factors:
-        print(f"{a}^{(n-1)//f} = {a**(n-1//f) % n} mod {n}")
-        if (a**(n-1//f) % n) == 1:
+        print(f"{a}^{(n-1)//f} = {(a**((n-1)//f)) % n} mod {n}")
+    for f in factors:
+        if ((a**((n-1)//f)) % n) == 1:
             return False
     return True
 
@@ -47,3 +48,4 @@ if __name__ == "__main__":
     else:
         print("\n")
         print("NO")
+        print(f"{a} is NOT a creator of the group Z_{n}")

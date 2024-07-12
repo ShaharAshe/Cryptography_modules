@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 def factor(n):
     temp_n = n
     factors = []
