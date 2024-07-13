@@ -8,7 +8,7 @@ TWO:final = 0.1
 
 
 class VigenereCipher:
-    def __init__(self, text:str, time:int=1):
+    def __init__(self, text:str, time:int=2):
         self.__text:str = text
         self.__decrypt_text:str = text
         self.__text_str:list = [int(c) for c in text if c.isnumeric()]
