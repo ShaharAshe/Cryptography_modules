@@ -60,8 +60,8 @@ def find_creator(n:int) -> int:
 if __name__ == "__main__":
     n = 1553
     a = find_creator(n)
-    if a == -1:
-        print(f"No creator found for the group Z_{n}")
-    else:
-        print(f"The creator of the group Z_{n} is {a}")
+    # if a == -1:
+    #     print(f"No creator found for the group Z_{n}")
+    # else:
+    #     print(f"The creator of the group Z_{n} is {a}")
     
