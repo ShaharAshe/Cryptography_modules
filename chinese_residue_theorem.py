@@ -8,22 +8,24 @@ def chinese_residue_theorem(p, q, n, a, b):
     d_1 = b%(q-1)
     d_2 = b%(p-1)
 
-    a_1 = x_1**d_1
-    a_2 = x_2**d_2
+    a_1 = (x_1**d_1)%q
+    a_2 = (x_2**d_2)%p
 
     c = (M_1*a_1 + M_2*a_2) % n
+    # print(f'{M_1 = }, {M_2 = }, {a_1 = }, {a_2 = }, {n = }')
 
     return c
 
 
 if __name__ == "__main__":
-    n = 143
-    p = 11
-    q = 13
+    # base^power mod n
+    n = 47197
+    p = 109
+    q = 433
 
-    a = 15
-    b = 103
+    base = 32975
+    power = 5489
 
-    res_c = chinese_residue_theorem(p, q, n, a, b)
+    res_c = chinese_residue_theorem(p, q, n, base, power)
 
     print(f"Chinese Residue Theorem: {res_c} mod {n}.")
