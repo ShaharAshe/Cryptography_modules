@@ -4,6 +4,7 @@ from math import ceil
 
 def fermat(n:int) -> tuple[int, int]:
     x:int = ceil(np.sqrt(n))
+    print(f'x = ceil(sqrt({n})) = {x}', end='\n\n')
     temp_table = []
     while np.sqrt((x**2)-n) != int(np.sqrt((x**2)-n)):
         temp_table.append([x, (x**2)-n, np.sqrt((x**2)-n)])
@@ -25,4 +26,5 @@ def fermat(n:int) -> tuple[int, int]:
 
 
 if __name__ == "__main__":
-    fermat(47197)
+    n=141203
+    fermat(n)
