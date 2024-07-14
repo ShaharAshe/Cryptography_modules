@@ -17,9 +17,9 @@ def euclidean_algorithm(e_a, e_b):
 
     for i in range(len(r)):
         if not i:
-            print(f'{i = }, r = {r[i]},        s = {s[i]}, t = {t[i]}')
+            print(f'{i = :<10} r = {r[i]:<10}{"":16}s = {s[i]:<10} t = {t[i]}')
         else:
-            print(f'{i = }, r = {r[i]}, q = {q[i-1]}, s = {s[i]}, t = {t[i]}')
+            print(f'{i = :<10} r = {r[i]:<10} q = {q[i-1]:<10} s = {s[i]:<10} t = {t[i]}')
     print("-----------------")
     print(f'we got that {r[-1]} = {e_a}*({s[-1]}) + {e_b}*({t[-1]})')
     print("-----------------")
@@ -30,8 +30,8 @@ def euclidean_algorithm(e_a, e_b):
     return (s[-1], t[-1])
 
 if __name__ == "__main__":
-    e_a = 17
-    e_b = 47
+    e_a = 46656
+    e_b = 17
     
     euclidean_res = euclidean_algorithm(e_a, e_b)
     # print(euclidean_res)
