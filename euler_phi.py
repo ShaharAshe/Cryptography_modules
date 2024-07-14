@@ -17,7 +17,21 @@ def factor(n):
     return factors
 
 
+def euler_phi(n):
+    factors:list = factor(n)
+    print(f'The factors of {n} are {factors}')
+    phi = 1
+    print("_________________________")
+    print("phi = ", end="")
+    for f in factors:
+        phi *= (f-1)
+        print(f'({f}-1) ', end="")
+    print(f'= {phi}')
+    print("_________________________")
+    return phi
+
+
 if __name__ == "__main__":
-    n = 348
-    factors = factor(n)
-    print(f"The factors of {n} are: {factors}")
+    n = 143
+    phi1 = euler_phi(n)
+    # print(f'{phi = }')
