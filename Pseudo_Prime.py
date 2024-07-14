@@ -17,17 +17,33 @@ def pseudo_prime(a:int ,n:int):
         k, r = factorize(n-1)
         res:list = [(a**r) % n]
         print(f'b0 = {a}^{r} = {res[0]} mod {n}')
-        if res[0] == 1 or res[0] == n-1:
-            print(f"{n} is a Strong pseudoprime to base {a}")
-            return
-        else:
-            for i in range(k-1):
-                if res[-1] == 1 or res[-1] == n-1:
-                    print(f"{n} is a Strong pseudoprime to base {a}")
+        for i in range(k):
+            if res[-1] == 1 or res[-1] == n-1:
+                if i == 0:
+                    print(f'_______________________________')
+                    print(f"[Miller Rabin] - {n} is a Strong pseudo prime to base {a}")
+                    print(f'[Fermat] - {n} is a pseudo prime to base {a}')
+                    print(f'_______________________________')
                     return
-                res.append((res[i]**2) % n)
-                print(f'b{i+1} = {res[i]}^2 = {res[-1]} mod {n}')
-        print(f"{n} is not a pseudoprime or a Strong pseudoprime to base {a}")
+                else:
+                    print(f'_______________________________')
+                    print(f"[Miller Rabin] - {n} is a composite number to base {a}")
+                    print(f'[Fermat] - {n} is a pseudo prime to base {a}')
+                    print(f'_______________________________')
+                    return
+            res.append((res[i]**2) % n)
+            print(f'b{i+1} = {res[i]}^2 = {res[-1]} mod {n}')
+            if res[-1] == 1 or res[-1] == n-1:
+                print(f'_______________________________')
+                print(f"[Miller Rabin] - {n} is a composite number to base {a}")
+                print(f'[Fermat] - {n} is a pseudo prime to base {a}')
+                print(f'_______________________________')
+                return
+        
+        print(f'_______________________________')
+        print(f"[Miller Rabin] - {n} is a composite number to base {a}")
+        print(f'[Fermat] - {n} is a composite number to base {a}')
+        print(f'_______________________________')
 
 
 if __name__ == "__main__":
