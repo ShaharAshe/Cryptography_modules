@@ -14,7 +14,7 @@ def pollard_algorithm(n:int):
         res **= B
         res %= n
         gcd_res = gcd((res-1)%n, n)
-        print(f'{B = } | 2^{B}! mod{n} = {res:<10}| gcd(2^{B}!-1 mod{n}) = {gcd_res})')
+        print(f'{B = } | 2^{B}! mod{n} = {res:<10}| gcd((2^{B}!-1 mod{n}), {n}) = {gcd_res}')
         if gcd_res != 1:
             print("--------------------------------")
             print(f'{gcd_res} is a prime factor of {n}.')
@@ -25,4 +25,5 @@ def pollard_algorithm(n:int):
 
 
 if __name__ == "__main__":
-    pollard_algorithm(15707)
+    n = 141203
+    pollard_algorithm(n)
