@@ -66,13 +66,13 @@ class UniversalExponent:
                 print(f"{self.a} is not a universal exponent lets try another number")
                 self.__find_a(self.n)
                 print(f"New a: {self.a}")
-                return
+                
 
 
 if "__main__" == __name__:
-    n = 47197
-    d = 5489
-    e = 17
+    n = 11639
+    d = 90919
+    e = 19
 
     ue = UniversalExponent(n, d, e)
     ue.process()
