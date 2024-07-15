@@ -9,7 +9,7 @@ def affine(origin_1, origin_2, cipher_1, cipher_2):
     
     print(f"We have:")
     print(f"e({origin_1}) = {cipher_1}")
-    print(f"{origin_1} = {a_co_1} // {origin_2} = {c_co_1}")
+    print(f"{origin_1} = {a_co_1} // {cipher_1} = {c_co_1}")
     print("AND:")
     print(f"e({origin_2}) = {cipher_2}")
     print(f"{origin_2} = {a_co_2} // {cipher_2} = {c_co_2}", end="\n\n")

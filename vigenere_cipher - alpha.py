@@ -212,6 +212,8 @@ class VigenereCipher:
 
 
 if __name__ == '__main__':
+    # The code is working only for blocks of 3 !!! #
+    
     Encrypted_text:str = "CAACAACBCA"
     AA:float = 0.6
     BB:float = 0.2
