@@ -181,18 +181,22 @@ class VigenereCipher:
 
     def __check_key(self) -> int:
         sum = 0
-        print(f"{self.__text_str}")
+        for s in self.__text_str:
+            print(f"{s}", end=" ")
+        print(" -> The original text")
         while True:
-            print(f"{' '*(self.__time*3)}{self.__text_str}")
+            print(f"{'':{self.__time * 2}}", end="")
+            for s in self.__text_str:
+                print(f"{s}", end=" ")
+            print(f" -> ", end="")
+
             temp_frequencies_vector:list = self.__first_frequencies_vector[:len(self.__first_frequencies_vector)-self.__time]
             temp_sum = 0
             temp_first_frequencies_vector = self.__first_frequencies_vector[self.__time:]
             for i in range(len(temp_frequencies_vector)):
-                f = temp_first_frequencies_vector[i]
-                l = temp_frequencies_vector[i]
                 if temp_first_frequencies_vector[i] == temp_frequencies_vector[i]:
                     temp_sum += 1
-            print(f'for {self.__time} we have {temp_sum} equal elements (Adjustments)')
+            print(f'for {self.__time} we have {temp_sum} equal elements')
             if temp_sum > sum:
                 sum = temp_sum
                 self.__time += 1
