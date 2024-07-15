@@ -41,7 +41,7 @@ class UniversalExponent:
             print(f"a = {self.a}:")
             print("---------------------------------")
             pow_ex = pow(self.a, self.ed_sub_1[1], self.n)
-            print(f"{self.a}^r = {(2**self.ed_sub_1[0])%self.n} mod {self.n}")
+            print(f"{self.a}^r = {pow_ex} mod {self.n}")
             for i in range(self.ed_sub_1[0]):
                 pow_ex_temp = pow(pow_ex, 2, self.n)
                 print(f"{pow_ex}^2 = {pow_ex_temp} mod {self.n}")
