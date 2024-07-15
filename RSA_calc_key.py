@@ -1,5 +1,6 @@
 def calc(q, p, e_d):
     phi = (p-1) * (q-1)
+    print(f'{phi = }')
     return pow(e_d, -1, phi)
 
 

@@ -38,10 +38,10 @@ def square_and_mul(n, c, z, ts, c_ab):
 
 
 if __name__ == "__main__":
-    n = 16157
+    n = 16241
     # c = 2
     # z = 13910
-    power = 2
-    base = 13910
+    power = 17
+    base = 2093
 
     square_and_mul(n, power, base, power, base)

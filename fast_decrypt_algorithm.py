@@ -19,12 +19,12 @@ def chinese_residue_theorem(p, q, n, a, b):
 
 if __name__ == "__main__":
     # base^power mod n
-    n = 47197
+    n = 16241
     p = 109
-    q = 433
+    q = 149
 
-    base = 32975
-    power = 5489
+    base = 10997
+    power = 3761
 
     res_c = chinese_residue_theorem(p, q, n, base, power)
 
