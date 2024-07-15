@@ -1,0 +1,1 @@
+1. When you have `d` and `e` and you looking for a divisor of `n`, you will use: `universal_exponent_algorithm.py`
