@@ -2,13 +2,16 @@ import numpy as np
 from typing import final
 
 
-ZERO:final = 0.7
-ONE:final = 0.2
-TWO:final = 0.1
-
-
 class VigenereCipher:
-    def __init__(self, text:str, time:int=2):
+    def __init__(self, text:str, ZERO:float, ONE:float, TWO:float, number_1:int=0, number_2:int=1, number_3:int=2, time:int=2) -> None:
+        self.__ZERO:float = ZERO
+        self.__ONE:float = ONE
+        self.__TWO:float = TWO
+
+        self.__number_1:int = number_1
+        self.__number_2:int = number_2
+        self.__number_3:int = number_3
+
         self.__text:str = text
         self.__decrypt_text:str = text
         self.__text_str:list = [int(c) for c in text if c.isnumeric()]
@@ -24,11 +27,11 @@ class VigenereCipher:
     def __get_frequencies_vector(self):
         for i in range(len(self.__text_str)):
             if self.__text_str[i] == 0:
-                self.__first_frequencies_vector.append(ZERO)
+                self.__first_frequencies_vector.append(self.__ZERO)
             elif self.__text_str[i] == 1:
-                self.__first_frequencies_vector.append(ONE)
+                self.__first_frequencies_vector.append(self.__ONE)
             elif self.__text_str[i] == 2:
-                self.__first_frequencies_vector.append(TWO)
+                self.__first_frequencies_vector.append(self.__TWO)
 
 
     def process(self):
@@ -37,7 +40,7 @@ class VigenereCipher:
         print("=====================================")
 
         self.__right_text_str:list = []
-        for i in range(1, (len(self.__text_str)//self.__time)+1):
+        for i in range(1, (len(self.__text_str)//self.__time)+1+len(self.__text_str)%self.__time):
             self.__right_text_str += [self.__text_str[(i-1)*self.__time:i*self.__time]]
         
         self.__decrypt()
@@ -69,7 +72,7 @@ class VigenereCipher:
         
 
     def __decrypt(self):
-        A1 = [ZERO, ONE, TWO]
+        A1 = [self.__ZERO, self.__ONE, self.__TWO]
         A2 = A1[2:]+A1[:2]
         A3 = A2[2:]+A2[:2]
 
@@ -83,39 +86,48 @@ class VigenereCipher:
 
         # build V1
         for i in range(len(first_leteer)):
-            if first_leteer[i] == 0:
+            if first_leteer[i] == self.__number_1:
                 V1[0] += 1
-            elif first_leteer[i] == 1:
+            elif first_leteer[i] == self.__number_2:
                 V1[1] += 1
-            elif first_leteer[i] == 2:
+            elif first_leteer[i] == self.__number_3:
                 V1[2] += 1
         sumv = sum(V1)
         for i in range(len(V1)):
-            V1[i] /= sumv
+            if sumv:
+                V1[i] /= sumv
+            else:
+                V1[i] = 0
 
         # build V2
         for i in range(len(second_leteer)):
-            if second_leteer[i] == 0:
+            if second_leteer[i] == self.__number_1:
                 V2[0] += 1
-            elif second_leteer[i] == 1:
+            elif second_leteer[i] == self.__number_2:
                 V2[1] += 1
-            elif second_leteer[i] == 2:
+            elif second_leteer[i] == self.__number_3:
                 V2[2] += 1
         sumv = sum(V2)
         for i in range(len(V2)):
-            V2[i] /= sumv
+            if sumv:
+                V2[i] /= sumv
+            else:
+                V2[i] = 0
 
         # build V3
         for i in range(len(third_leteer)):
-            if third_leteer[i] == 0:
+            if third_leteer[i] == self.__number_1:
                 V3[0] += 1
-            elif third_leteer[i] == 1:
+            elif third_leteer[i] == self.__number_2:
                 V3[1] += 1
-            elif third_leteer[i] == 2:
+            elif third_leteer[i] == self.__number_3:
                 V3[2] += 1
         sumv = sum(V3)
         for i in range(len(V3)):
-            V3[i] /= sumv
+            if sumv:
+                V3[i] /= sumv
+            else:
+                V3[i] = 0
         
         A1V1 = np.dot(A1, V1)
         A2V1 = np.dot(A2, V1)
@@ -196,5 +208,15 @@ class VigenereCipher:
 
 if __name__ == '__main__':
     Encrypted_text:str = "01221 22102 21211"
-    cipher = VigenereCipher(Encrypted_text, 2)
+    ZERO:final = 0.7
+    ONE:final = 0.2
+    TWO:final = 0.1
+
+    number_1:int = 0
+    number_2:int = 1
+    number_3:int = 2
+
+    min_sift:int = 2
+
+    cipher = VigenereCipher(Encrypted_text, ZERO, ONE, TWO, number_1, number_2, number_3, min_sift)
     cipher.process()
