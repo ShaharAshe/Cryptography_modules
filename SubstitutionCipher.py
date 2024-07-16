@@ -5,11 +5,16 @@ def most_common(i: int, strI: str):
 
 def cipher(i: int, strI: str):
     str_list, mC = most_common(i, strI)
+    print("\n===========================================================")
+    print("_________________________________")
+    print(f"Now we will analyze the message M{i + 1} encripted")
+    print("_________________________________")
     print(f"The most common letter in the M{i + 1} cipher is: {mC}", end="\n\n")
     re_list = []
     letter_frequency = ["e", "t", "a", "o", "i", "n", "s", "h", "r", "d", "l", "c", "u", "m", "w", "f", "g", "y", "p", "b", "v", "k", "j", "x", "q", "z"]
 
     for aBi in range(len(letter_frequency)):
+        print(f"More {len(letter_frequency)-(aBi+1)} possible messages for M{i + 1}\n")
         distunce = ((ord(mC.lower()) - ord(letter_frequency[aBi])) % 26)
         if distunce >= 0:
             re_list = " ".join([str(chr(((ord(s) - ord("a") - distunce) % 26) + ord('a'))) for s in str_list])
@@ -43,8 +48,8 @@ def cipher(i: int, strI: str):
 
 
 if __name__ == "__main__":
-    M1 = "xkxo qdtm tkmu dgqb kcza pmkd gtkq pues"
-    M2 = "nani mzfe faeu zsmv akrg xeaz sfam xuoq"
+    M1 = "nexs mpmf wpbx nkpg xgdd vbfk"
+    M2 = "qbyh xcxu fcwy qlcn ynii mwul"
 
     text_encripted = [M1, M2]
 

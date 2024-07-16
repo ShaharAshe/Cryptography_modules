@@ -51,9 +51,9 @@ def find_the_special_block_cipher(M1:str, M2:str, M3:str) -> str:
 
 
 if __name__ == "__main__":
-    M1 = "vielm bdugb oujld iglof ltbmc lbohl"
-    M2 = "lzlgx ujprk uqqxt vnsne uffhj uztol"
-    M3 = "sfzql oexpo bxaqe fpqbu qcolj qobkq"
+    M1 = "nexs mpmf wpbx nkpg xgdd vbfk"
+    M2 = "ilul vgps jcag wjmn spwy uoqh"
+    M3 = "qbyh xcxu fcwy qlcn ynii mwul"
 
     block:str = find_the_special_block_cipher(M1, M2, M3)
     # print(block)
