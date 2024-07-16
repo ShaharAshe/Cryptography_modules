@@ -34,6 +34,13 @@ def square_root(num:int, p:int, q:int, n:int)->int:
         roots.append((-num_2)%q)
 
         print(f"The roots are: {roots}")
+
+        print('\n-----------')
+        print(f'check if {num%p} = {pow(num_1, 2, p)}')
+        print(f'check if {num%q} = {pow(num_2, 2, q)}')
+        print(f'If one of the above is False, then the number {num} has no square roots')
+        print('-----------')
+
         return num_of_squares
     elif gcd_num_n == p or gcd_num_n == q:
         num_of_squares = 2
@@ -51,6 +58,13 @@ def square_root(num:int, p:int, q:int, n:int)->int:
 
             roots.append(num_2)
             roots.append((-num_2)%q)
+
+            print(f"The roots are: {roots}")
+
+            print('\n-----------')
+            print(f'check if {num%p} = {pow(num_2, 2, q)}')
+            print(f'If one of the above is False, then the number {num} has no square roots')
+            print('-----------')
             
         else:
             print(f"The gcd({num},{n}) = q = {q}, so the number of square roots is 2")
@@ -66,19 +80,30 @@ def square_root(num:int, p:int, q:int, n:int)->int:
             roots.append(num_1)
             roots.append((-num_1)%p)
 
-        print(f"The roots are: {roots}")
+            print(f"The roots are: {roots}")
+
+            print('\n-----------')
+            print(f'check if {num%q} = {pow(num_1, 2, p)}')
+            print(f'If one of the above is False, then the number {num} has no square roots')
+            print('-----------')
+
         return num_of_squares
-        
+    
+    if num == 0:
+        print(f"The number is 0, so the number of square roots is 1")
+        print(f"The root is 0")
+        return 1
+    
     print(f"The gcd({num},{n}) n = pq, so the number of square roots is 0")
     print(f"The are no square roots")
     return num_of_squares
 
 
 if __name__ == '__main__':
-    p = 103
-    q = 211
-    n = 21733
+    p = 31
+    q = 71
+    n = 2201
 
-    num = 21424
+    num = 318
 
     print(square_root(num, p, q, n))
