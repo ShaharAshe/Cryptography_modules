@@ -40,8 +40,8 @@ def is_a_creator(n:int, a:int) -> bool:
     return True
 
 if __name__ == "__main__":
-    n = 349
-    a = 18
+    n = 67
+    a = 7
     if is_a_creator(n, a):
         print("\n")
         print(f"YES {a} is a creator of the group Z_{n}")

@@ -32,6 +32,6 @@ def euler_phi(n):
 
 
 if __name__ == "__main__":
-    n = 66
+    n = 26069
     phi1 = euler_phi(n)
     # print(f'{phi = }')
