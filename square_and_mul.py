@@ -24,24 +24,26 @@ def square_and_mul(n, c, z, ts, c_ab):
                 k += 2
                 print(f'z^2 = 1 (mod {n})')
             else:
+                print(f'z^2 = {z_new}^2', end='')
                 z_new = (z_new**2)%n
                 s_k.append(z_new)
-                print(f'z^2 = {s_k[-2]}^2 = {s_k[-1]} (mod {n})')
+                print(f' = {s_k[-1]} (mod {n})')
 
             if c_bit[i] == 1:
+                print(f'z*{z} = {z_new}*{z}', end='')
                 z_new = (z_new*z)%n
                 r_k.append(z_new)
-                print(f'z*{z} = {z_new}*{z} = {r_k[-1]} (mod {n})')
+                print(f' = {r_k[-1]} (mod {n})')
         print("-----------------------------")
         print(f'And we got that {c_ab}^{ts} = {z_new} (mod {n})')
         return z_new
 
 
 if __name__ == "__main__":
-    n = 16241
+    n = 26069
     # c = 2
     # z = 13910
     power = 17
-    base = 2093
+    base = 3189
 
     square_and_mul(n, power, base, power, base)
