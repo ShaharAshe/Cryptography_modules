@@ -105,5 +105,4 @@ if __name__ == '__main__':
     n = 2201
 
     num = 318
-
-    print(square_root(num, p, q, n))
+    square_root(num, p, q, n)
