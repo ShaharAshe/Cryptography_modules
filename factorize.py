@@ -7,6 +7,6 @@ def factorize(n:int) -> tuple[int, int]:
 
 
 if __name__ == '__main__':
-    n = 48
+    n = 21808
     k, r = factorize(n)
     print(f'2^k*r = 2^{k}*{r} = {n}')

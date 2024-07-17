@@ -21,7 +21,7 @@ def rabin_miler(n:int, a:int) -> int:
 
     res:list = [(a**r) % n]
     print(f'b0 = {a}^{r} = {res[0]} mod {n}')
-    for i in range(k-1):
+    for i in range(k):
         if res[-1] == 1 or res[-1] == n-1:
             break
         res.append((res[i]**2) % n)
@@ -61,4 +61,4 @@ def composite(n:int, start:int, end:int) -> None:
         
 
 if __name__ == "__main__":
-    composite(n=47197, start=2, end=10)
+    composite(n=21809, start=111, end=112)
