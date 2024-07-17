@@ -47,6 +47,10 @@ def pseudo_prime(a:int ,n:int):
 
 
 if __name__ == "__main__":
-    for i in range(2, 11):
-        pseudo_prime(i, 47197)
+    start=111
+    end=112
+
+    n=21809
+    for i in range(start, end+1):
+        pseudo_prime(i, n)
         print("/////////////////////////////////", end='\n\n')
