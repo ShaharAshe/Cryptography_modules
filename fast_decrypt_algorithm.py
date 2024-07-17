@@ -1,8 +1,8 @@
 def chinese_residue_theorem(p, q, n, a, b):
     M_1 = p*(pow(p, -1, q))
     M_2 = q*(pow(q, -1, p))
-    print(f"M_1 = p*(p^-1 mod q) = {p}*({p}({p}^-1 mod {q})) = {p}*({pow(p, -1, q)}) = {M_1}")
-    print(f"M_2 = q*(q^-1 mod p) = {q}*({q}({q}^-1 mod {p})) = {q}*({pow(q, -1, p)}) = {M_2}\n")
+    print(f"M_1 = p*(p^-1 mod q) = {p}*({p}^-1 mod {q}) = {p}*({pow(p, -1, q)}) = {M_1}")
+    print(f"M_2 = q*(q^-1 mod p) = {q}*({q}^-1 mod {p}) = {q}*({pow(q, -1, p)}) = {M_2}\n")
     
     x_1 = a%q
     x_2 = a%p
@@ -28,12 +28,12 @@ def chinese_residue_theorem(p, q, n, a, b):
 
 if __name__ == "__main__":
     # base^power mod n
-    n = 16241
-    p = 109
-    q = 149
+    n = 116339
+    p = 317
+    q = 367
 
-    base = 10997
-    power = 3761
+    base = 1234
+    power = 36523
 
     res_c = chinese_residue_theorem(p, q, n, base, power)
 

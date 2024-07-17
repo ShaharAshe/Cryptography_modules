@@ -18,6 +18,6 @@ def factor(n):
 
 
 if __name__ == "__main__":
-    n = 348
+    n = 810
     factors = factor(n)
     print(f"The factors of {n} are: {factors}")
