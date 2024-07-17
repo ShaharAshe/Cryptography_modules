@@ -19,9 +19,9 @@ def decrypt(plaintext:str, a:int, b:int) -> str:
 
 
 if __name__ == "__main__":
-    plaintext = "nexs mpmf wpbx nkpg xgdd vbfk"
-    a = 11
-    b = 5
+    plaintext = "vielm bdugb oujld iglof ltbmc lbohl"
+    a = 5
+    b = 20
 
     de_txt = decrypt(plaintext, a, b)
     # print(de_txt)

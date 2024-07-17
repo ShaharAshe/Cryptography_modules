@@ -33,7 +33,7 @@ def cipher(i: int, strI: str):
                 print(f"e(x) = x+{distunce} mod26")
                 print("---------------------------------")
                 print(f"And copying the decoding is:")
-                print(f"d(y) = d-{distunce} = d+{26 - distunce} mod26")
+                print(f"d(y) = y-{distunce} = y+{26 - distunce} mod26")
                 print("=================================", end="\n\n")
                 ans = input("Do you want to continue with the other message? (y/n): ")
                 while ans not in ['y', 'n']:
@@ -48,8 +48,8 @@ def cipher(i: int, strI: str):
 
 
 if __name__ == "__main__":
-    M1 = "nexs mpmf wpbx nkpg xgdd vbfk"
-    M2 = "qbyh xcxu fcwy qlcn ynii mwul"
+    M1 = "vielm bdugb oujld iglof ltbmc lbohl"
+    M2 = "sfzql oexpo bxaqe fpqbu qcolj qobkq"
 
     text_encripted = [M1, M2]
 

@@ -94,7 +94,8 @@ def hill(original_text, encrypted_text):
 
 
 if __name__ == "__main__":
-    original_text:str = "when"
-    encrypted_text:str ="nexs"
+    # put only 4 letters in the original_text and encrypted_text
+    original_text:str = "v i c t"
+    encrypted_text:str ="lzlg"
     
     hill(original_text, encrypted_text)

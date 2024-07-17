@@ -78,10 +78,10 @@ def affine(origin_1, origin_2, cipher_1, cipher_2):
 
 
 if __name__ == "__main__":
-    origin_1 = "A"
-    cipher_1 = "F"
+    origin_1 = "v"
+    cipher_1 = "v"
 
     origin_2 = "C"
-    cipher_2 = "B"
+    cipher_2 = "e"
 
     affine(origin_1, origin_2, cipher_1, cipher_2)
