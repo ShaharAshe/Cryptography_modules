@@ -100,9 +100,9 @@ def square_root(num:int, p:int, q:int, n:int)->int:
 
 
 if __name__ == '__main__':
-    p = 31
-    q = 71
-    n = 2201
+    p = 67
+    q = 163
+    n = 10921
 
-    num = 318
+    num = 209
     square_root(num, p, q, n)
