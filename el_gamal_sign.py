@@ -69,14 +69,14 @@ class Elgaml:
 
 
 if __name__ == "__main__":
-    p = 1553
+    p = 307
     alpha = 5
-    beta = 1356
+    beta = 38
     a = 300
     # --- message ---
     m=123
     # ---------------
 
-    elgamal = Elgaml(n, alpha, beta, a, m)
+    elgamal = Elgaml(p, alpha, beta, a, m)
     elgamal.sign()
     elgamal.verify()
