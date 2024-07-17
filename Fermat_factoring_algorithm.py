@@ -26,5 +26,5 @@ def fermat(n:int) -> tuple[int, int]:
 
 
 if __name__ == "__main__":
-    n=141203
+    n=17363
     fermat(n)

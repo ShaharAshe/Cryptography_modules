@@ -69,7 +69,7 @@ class Elgaml:
 
 
 if __name__ == "__main__":
-    n = 1553
+    p = 1553
     alpha = 5
     beta = 1356
     a = 300

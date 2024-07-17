@@ -50,6 +50,6 @@ def generate_key(p, k):
 
 
 if __name__ == "__main__":
-    p = 2003
-    k = 111
+    p = 1019
+    k = 123
     symmetric_key = generate_key(p, k)

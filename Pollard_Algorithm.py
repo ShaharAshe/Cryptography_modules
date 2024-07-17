@@ -25,5 +25,5 @@ def pollard_algorithm(n:int):
 
 
 if __name__ == "__main__":
-    n = 141203
+    n = 17363
     pollard_algorithm(n)

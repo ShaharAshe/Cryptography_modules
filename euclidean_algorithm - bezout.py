@@ -30,8 +30,8 @@ def euclidean_algorithm(e_a, e_b):
     return (s[-1], t[-1])
 
 if __name__ == "__main__":
-    e_a = 115656
-    e_b = 19
+    e_a = 17
+    e_b = 71
     
     euclidean_res = euclidean_algorithm(e_a, e_b)
     # print(euclidean_res)

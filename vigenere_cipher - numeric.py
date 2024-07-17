@@ -213,7 +213,7 @@ class VigenereCipher:
 if __name__ == '__main__':
     # The code is working only for blocks of 3 !!! #
 
-    Encrypted_text:str = "01221 22102 21211"
+    Encrypted_text:str = "211012212210201"
     ZERO:final = 0.7
     ONE:final = 0.2
     TWO:final = 0.1
