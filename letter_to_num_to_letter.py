@@ -9,7 +9,7 @@ def calc_num_to_char(num:int):
     return char
 
 if __name__ == "__main__":
-    char = "n"
+    char = "o"
     num = 14
 
     calc_char_to_num(char=char)

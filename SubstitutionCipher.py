@@ -48,8 +48,8 @@ def cipher(i: int, strI: str):
 
 
 if __name__ == "__main__":
-    M1 = "vielm bdugb oujld iglof ltbmc lbohl"
-    M2 = "sfzql oexpo bxaqe fpqbu qcolj qobkq"
+    M1 = "wjwrv ionoj diozm xzkov gdxzn xvmyn"
+    M2 = "zmzye rnsnm qrnkx ukhne bquks uexps"
 
     text_encripted = [M1, M2]
 
