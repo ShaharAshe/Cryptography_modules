@@ -9,7 +9,7 @@ def quantum(up, down):
             if d == "x" or d == "X":
                 print(u, end=" ")
             else:
-                print("|", end=" ") if u!="x" or u!="X" else print("+", end=" ")
+                print("|", end=" ") if u!="x" and u!="X" else print("+", end=" ")
     print()
     
 
