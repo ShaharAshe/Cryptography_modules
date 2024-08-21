@@ -90,12 +90,12 @@ def roots_by_n(n, p, q, b):
 
 
 if __name__ == "__main__":
-    n = 10921
-    p = 67
-    q = 163
+    n = 56977
+    p = 251
+    q = 227
     
     # b=4524
-    b=209
+    b=45423
     # b=4757
 
     roots_by_n(n, p, q, b)
